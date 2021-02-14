@@ -1,0 +1,49 @@
+//primary decoration
+$bg-color: white;
+$primary-color: #585772;
+$secondary-color: #c36cbb;
+
+//example type -1
+// $bg-color: rgb(2, 16, 17);
+// $primary-color: rgb(212, 125, 26);
+// $secondary-color: rgb(35, 174, 209);
+
+//emaple type -2
+// $bg-color: rgb(74, 193, 223);
+// $primary-color: black;
+// $secondary-color: rgb(43, 46, 224);
+
+//example type -3
+// $bg-color: rgb(209, 241, 132);
+// $primary-color: #585772;
+// $secondary-color: rgb(219, 82, 190);
+
+//example type -4
+// $bg-color: rgb(77, 185, 101);
+// $primary-color: #141405;
+// $secondary-color: #c22633;
+
+//functions for chaging colors if bg color is changed !
+@function set-text-color($bg-color) {
+  @if (lightness($bg-color) > 40) {
+    @return $primary-color;
+  } @else {
+    @return white;
+  }
+}
+
+@function set-text-color-buttons($bg-color) {
+  @if (lightness($bg-color) > 40) {
+    @return $secondary-color;
+  } @else {
+    @return white;
+  }
+}
+
+@function set-text-color-add($bg-color) {
+  @if (lightness($bg-color) < 40) {
+    @return $bg-color;
+  } @else {
+    @return white;
+  }
+}
