@@ -1,0 +1,268 @@
+@import "config";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 10vh;
+  align-items: center;
+}
+
+.logo,
+.nav-lists,
+.cart {
+  display: flex;
+}
+
+.logo {
+  flex: 1;
+}
+.logo-name {
+  text-decoration: none;
+  font-weight: 410;
+  margin: 5px;
+  color: set-text-color($bg-color);
+}
+
+nav {
+  flex: 2;
+}
+.nav-lists {
+  list-style: none;
+  justify-content: space-around;
+}
+.nav-l {
+  color: set-text-color($bg-color);
+  text-decoration: none;
+  font-size: 18px;
+}
+.cart {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+//hover
+a.nav-l:hover,
+a.logo-name:hover {
+  color: $secondary-color;
+}
+
+.main {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+}
+.info {
+  flex: 1;
+}
+
+.note h1 {
+  color: $primary-color;
+  font-size: 50px;
+  font-weight: 500;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 20px;
+}
+
+.note p {
+  font-size: 25px;
+  color: set-text-color($bg-color);
+  font-weight: 30;
+  margin-bottom: 20px;
+}
+
+.note {
+  animation-name: notee;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+}
+
+@keyframes notee {
+  0% {
+    left: -1050px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.image {
+  display: flex;
+  flex: 1;
+  height: 60vh;
+  justify-content: center;
+
+  animation-name: image-transition;
+  position: relative;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes image-transition {
+  0% {
+    top: -1000px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.image img {
+  height: 100%;
+  filter: drop-shadow(0px 5px 3px black);
+}
+
+.btns {
+  padding: 50px 0px 0px 0px;
+  font-family: "Poppins", sans-serif;
+
+  animation-name: buttons;
+  opacity: 0;
+  animation-delay: 3s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes buttons {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.select {
+  font-size: 15px;
+  border: 2px solid set-text-color-buttons($bg-color);
+  color: set-text-color-buttons($bg-color);
+  background: transparent;
+  width: 150px;
+  height: 50px;
+  margin-right: 40px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $secondary-color;
+    color: $secondary-color;
+  }
+}
+
+.add-cart {
+  font-size: 15px;
+  font-weight: 200;
+  border: 3px solid set-text-color-buttons($bg-color);
+  color: set-text-color-add($bg-color);
+  background: set-text-color-buttons($bg-color);
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+  }
+}
+
+.lap-select {
+  text-decoration: none;
+  position: absolute;
+  right: 20%;
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+
+  animation-name: buttons;
+  opacity: 0;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.buttons {
+  margin-top: 2.25px;
+}
+
+.circle-1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 80%;
+  z-index: -5;
+  opacity: 0.5;
+}
+
+.circle-2 {
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  z-index: -5;
+  height: 60%;
+  opacity: 0.4;
+}
+
+.circle-3 {
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+  z-index: -5;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+  }
+  .info {
+    margin-top: 5vh;
+    text-align: center;
+  }
+  .note {
+    padding: 10px 0px 0px 0px;
+  }
+  .note h1 {
+    font-size: 30px;
+  }
+  .note p {
+    font-size: 18px;
+  }
+  .image img {
+    height: 80%;
+  }
+  .circle-1,
+  .circle-2,
+  .circle-3 {
+    opacity: 0.2;
+  }
+  .lap-select {
+    width: 50%;
+    bottom: 5%;
+    right: 50%;
+    /////centering selectors
+    transform: translate(50%, 5%);
+  }
+  .logo-name {
+    font-size: 15 px;
+    margin-right: 0px;
+  }
+  .nav-l {
+    margin-left: 20px;
+    font-size: 17px;
+    padding-right: 10px;
+  }
+}
