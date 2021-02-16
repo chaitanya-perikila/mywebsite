@@ -343,4 +343,62 @@ a.logo-name:hover {
     padding-right: 10px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 3vh 5vh 2vh 5vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logo-name {
+    padding-bottom: 5px;
+    display: inline;
+    width: 30%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav {
+    padding-bottom: 3px;
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image img {
+    height: 70%;
+  }
+  .lap-select {
+    width: 50%;
+    bottom: 5%;
+    right: 50%;
+    -webkit-transform: translate(50%, 5%);
+            transform: translate(50%, 5%);
+  }
+  .select {
+    margin-top: 1%;
+    margin-left: 12%;
+    margin-bottom: 5%;
+  }
+  .note p {
+    font-size: 15px;
+  }
+  .note h1 {
+    font-size: 30px;
+  }
+  .btns {
+    padding-top: 5px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

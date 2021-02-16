@@ -266,3 +266,47 @@ a.logo-name:hover {
     padding-right: 10px;
   }
 }
+@media screen and (max-width: 400px) {
+  .btns {
+    flex-direction: column;
+    padding-bottom: 3vh 5vh 2vh 5vh;
+    align-items: center;
+  }
+  .logo-name {
+    padding-bottom: 5px;
+    display: inline;
+    width: 30%;
+    flex-direction: row;
+  }
+  .nav {
+    padding-bottom: 3px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .image img {
+    height: 70%;
+  }
+  .lap-select {
+    width: 50%;
+    bottom: 5%;
+    right: 50%;
+    /////centering selectors
+    transform: translate(50%, 5%);
+  }
+  .select {
+    margin-top: 1%;
+    margin-left: 12%;
+    margin-bottom: 5%;
+  }
+  .note p {
+    font-size: 15px;
+  }
+  .note h1 {
+    font-size: 30px;
+  }
+  .btns {
+    padding-top: 5px;
+  }
+}
